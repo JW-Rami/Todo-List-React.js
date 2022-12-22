@@ -7,15 +7,51 @@
   align-items: center;
 }
 
-form {
+.todo-container{
   height: 50%;
   width: 50%;
+  background-color: red;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  height: 40%;
+  width: 90%;
   background-color: antiquewhite;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
-
 form label {
   padding: 5%;
+}
+
+.todolist-container{
+  height: 60%;
+  width: 90%;
+  background-color: cadetblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+}
+
+.task-container{
+  height: 20px;
+  width: 80%;
+  background-color: goldenrod;
+  text-align: center;
+  border: solid black;
+}
+.task-container2{
+  height: 20px;
+  width: 80%;
+  background-color: goldenrod;
+  text-align: center;
+  border: solid black;
 }
