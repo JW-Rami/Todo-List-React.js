@@ -1,0 +1,17 @@
+.todo-container {
+    /* height: 100vh; */
+    height: 50%;
+    width: 90%;
+    background-color: darkgrey;
+    border: solid black;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.todo-title{
+    font-size: 2em;
+
+}

@@ -1,0 +1,16 @@
+.test{
+    height: 300px;
+    width: 600px;
+    max-width: 100vw !important;
+    background-color: aqua;
+    font-size: 2em;   
+}
+
+.mapping-test{
+    height: 300px;
+    width: 600px;
+    max-width: 100vw !important;
+    background-color: darkslateblue;
+    font-size: 2em; 
+    color: white;
+}

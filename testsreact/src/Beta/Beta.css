@@ -1,0 +1,42 @@
+.beta-container{
+    height: 90%;
+width: 100%;
+    background-color: rgba(55, 166, 127, 0.816);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    overflow: scoll;
+}
+
+.form-beta {
+    height: 25%;
+    width: 50%;
+    background-color: aqua;
+}
+
+.form-beta button {
+    padding: 2px;
+  margin: 0;
+  background-color: salmon;
+  border: white solid;
+  color: white;
+}
+.form-beta button:hover {
+    background-color: white;
+    color: salmon;
+    scale: (1.3);
+    transition: 1000ms;
+}
+
+.todolist-beta-container{
+    height: 60%;
+  width: 90%;
+  background-color: cadetblue;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+  overflow: scroll;
+}

@@ -1,0 +1,29 @@
+.form-todo-container{
+height: 100%;
+width: 100%;
+    background-color: rgba(55, 166, 127, 0.816);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    overflow: scoll;
+}
+.form-todo{
+    width: 80%;
+    height: 40%;
+    background-color: aquamarine;
+}
+
+.label-todo{
+    font-size: 0.8em;
+}
+
+.button-todo{
+    width: 40%;
+    height: 25px;
+}
+
+.list-task-todo-container {
+    width: 70%;
+    height: auto;
+}

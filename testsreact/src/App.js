@@ -1,30 +1,42 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { useState } from "react";
+import ToDoList from "./ToDoList.js/ToDoList";
 import { v4 as uuidv4 } from "uuid";
-
+import Beta from "./Beta/Beta";
 function App() {
   const [formState, setFormState] = useState({
     task: "",
+    id: uuidv4(),
   });
-  const [stateTask, setStateTask] = useState("");
+
+  // const [stateTask, setStateTask] = useState("");
 
   const [tasks, setTasks] = useState([]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
     const formData = {
-      id: uuidv4(),
       task: formState.task,
+      id: formState.id,
     };
-    console.log(formData);
-    setStateTask(formState.task);
+    // setStateTask(formState.task, formData.id);
     setTasks([...tasks, formData.task]);
+    console.log(formData.id);
   };
-
+  const handleDelete = (id) => {
+    const filtrerEtat = formState.filter((task) => {
+      return task.id !== id;
+    });
+    setFormState(filtrerEtat);
+  };
   const handleChange = (event) => {
-    setFormState({ ...formState, [event.target.name]: event.target.value });
+    setFormState({
+      ...formState,
+      [event.target.name]: event.target.value, 
+      // [event.target.id] : event.target.id 
+      // ,id : uuidv4()
+    });
+    console.log(formState);
   };
 
   return (
@@ -38,20 +50,19 @@ function App() {
               Envoyer{" "}
             </button>
           </form>
-          {/* <div className="todolist-container">
-            <div className="task-container2">{<p>{stateTask}</p>}</div>
-            <div className="task-container2">{<p>{stateTask}</p>}</div>
-          </div> */}
           <div className="todolist-container">
-            {tasks.map((task) => (
-              <div key={task.id} className="task-container">
-                <p>{task.task}</p>
+            {tasks.map((item) => (
+              <div key={item.id} id={item.id} className="task-container">
+                <p>{item}</p>
+                <button onClick={() => handleDelete}>delete</button>
               </div>
             ))}
           </div>
         </div>
+        {/* <ToDoList /> */}
+        <Beta/>
       </section>
-      {/* <div className="task-container">{<p>{formState.task}</p>}</div> */}
+      {/* comment récupérer l'identifiant de l'élement mappé pour le render ou non */}
     </>
   );
 }
