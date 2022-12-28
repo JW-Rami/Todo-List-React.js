@@ -7,13 +7,13 @@
   /* justify-content: center; */
   flex-direction: column ;
   align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
   background-color: #282c34;
-  
 }
 
-.todo-title {
-  background-color: yellow;
+.todo-title{
+  color:  rgb(202, 100, 10);
 }
