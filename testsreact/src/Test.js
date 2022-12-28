@@ -12,7 +12,6 @@ function Test() {
     { nom: "Julius" },
   ]);
 
- 
   return (
     <>
       <div className="test">
