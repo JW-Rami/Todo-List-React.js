@@ -17,3 +17,8 @@ body {
 .todo-title{
   color:  rgb(202, 100, 10);
 }
+
+.error-length{
+  color: red;
+  font-size: 12px ;
+}

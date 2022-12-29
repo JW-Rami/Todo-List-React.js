@@ -11,7 +11,17 @@ function ToDoForm({ addTodo }) {
   });
   function handleTaskInputChange(e) {
     setTodo({ ...todo, task: e.target.value });
+    // max length
+    if (e.target.value.length > 25) {
+      console.log("message d'erreur");
+      setIsMaxLengthReached(true);
+    } else if (e.target.value.length < 25) {
+      console.log("pas de message derreur");
+      setIsMaxLengthReached(false);
+    }
   }
+
+  const [isMaxLengthReached, setIsMaxLengthReached] = useState(false);
   function handleSumbit(e) {
     e.preventDefault();
     if (todo.task.trim) {
@@ -21,15 +31,27 @@ function ToDoForm({ addTodo }) {
     }
   }
   return (
-    <form onSubmit={handleSumbit}>
-      <input
-        name="task"
-        value={todo.task}
-        type="text"
-        onChange={handleTaskInputChange}
-      />
-      <button type="submit">Ajouter</button>
-    </form>
+    <>
+      <form onSubmit={handleSumbit}>
+        <input
+          name="task"
+          value={todo.task}
+          type="text"
+          onChange={handleTaskInputChange}
+          maxLength="26"
+        />
+        <button type="submit">Ajouter</button>
+      </form>
+      {isMaxLengthReached ? (
+        <>
+          <p className="error-length">
+            Vous avez atteint le nombre maximum de caractères 
+          </p>
+        </>
+      ) : (
+        <></>
+      )}
+    </>
   );
 }
 

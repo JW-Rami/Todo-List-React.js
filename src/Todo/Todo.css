@@ -1,12 +1,13 @@
 .list-container {
     /* background-color: red; */
-    height: 6%;
+    height: 8%;
     width: 80%;
     /* padding-top: 5%; */
     border: solid 1px rgb(202,100,10);
     border-radius: 10px;
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
+    justify-content: start;
     align-items: center;
     list-style: none;
 }
@@ -15,8 +16,23 @@
     /* border: solid 1px; */
 }
 
+.task-and-checkbox{
+    height: 100%;
+    /* width: 40%; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: blue; */
+    
+    }
 .delete-button {
     color: white;
-    position: relative;
-    right: 0%;
+    position: fixed;
+    right: 22%;
+    /* padding: 2% !important; */
+    height: 1%;
+    width: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
