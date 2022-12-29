@@ -3,10 +3,9 @@ import { useState } from "react";
 import TodoForm from "./TodoForm/TodoForm";
 import TodoList from "./TodoList/TodoList";
 import { useEffect } from "react";
-// import Todo from "./Todo";
 
+const LOCAL_STORAGE_KEY = "react-todo-list-todos";
 function App() {
-  const LOCAL_STORAGE_KEY = "react-todo-list-todos";
   const [todos, setTodos] = useState([]);
   // -----------------------------------
   useEffect(() => {
@@ -33,6 +32,7 @@ function App() {
             completed: !todo.completed,
           };
         }
+        return todo;
       })
     );
   }
@@ -40,6 +40,7 @@ function App() {
     setTodos(todos.filter((todo) => todo.id !== id));
   }
   return (
+    <>
     <div className="App">
       <div className="todo-title">
         <h1>TO DO LIST</h1>
@@ -49,8 +50,15 @@ function App() {
         todos={todos}
         toggleComplete={toggleComplete}
         removeTodo={removeTodo}
-      />
+        />
     </div>
+    <div className="error-mobile">
+      <div>
+
+      The Todo List website is for dekstop format. <br /><br /><br /> Increase the window's size or run it on dekstop.
+      </div>
+    </div>
+        </>
   );
 }
 

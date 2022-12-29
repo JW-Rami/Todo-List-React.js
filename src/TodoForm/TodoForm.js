@@ -9,6 +9,7 @@ function ToDoForm({ addTodo }) {
     task: "",
     completed: false,
   });
+  const [isMaxLengthReached, setIsMaxLengthReached] = useState(false);
   function handleTaskInputChange(e) {
     setTodo({ ...todo, task: e.target.value });
     // max length
@@ -21,7 +22,6 @@ function ToDoForm({ addTodo }) {
     }
   }
 
-  const [isMaxLengthReached, setIsMaxLengthReached] = useState(false);
   function handleSumbit(e) {
     e.preventDefault();
     if (todo.task.trim) {
@@ -29,6 +29,9 @@ function ToDoForm({ addTodo }) {
       // reset task input
       setTodo({ ...todo, task: "" });
     }
+  }
+  const limiteSize = () => {
+    
   }
   return (
     <>
@@ -45,7 +48,7 @@ function ToDoForm({ addTodo }) {
       {isMaxLengthReached ? (
         <>
           <p className="error-length">
-            Vous avez atteint le nombre maximum de caractères 
+            Vous avez atteint le nombre maximum de caractères
           </p>
         </>
       ) : (

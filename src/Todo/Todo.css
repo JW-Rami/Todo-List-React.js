@@ -1,6 +1,6 @@
 .list-container {
     /* background-color: red; */
-    height: 8%;
+    height: 10%;
     width: 80%;
     border: solid 1px rgb(202,100,10);
     border-radius: 10px;
@@ -14,21 +14,25 @@
 .list-container li {
     /* border: solid 1px; */
     color: rgb(202,100,10);
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: 800;
 }
 
 .task-and-checkbox{
     height: 100%;
+    width: 80%;
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     align-items: center;
     /* background-color: blue; */
-    
     }
   
   .text-todo{
-    padding-left: 40%;
+    padding-left: 10%;
+    width: 100%;
+    max-height: 2%;
+    height: 2%;
+    /* background-color: red; */
   }
 .delete-button {
     color: white;
@@ -53,7 +57,8 @@ input[type="checkbox"] {
   }
   
   input[type="checkbox"]:checked {
-    background: black;
+    background: rgb(200,100,10);
+    transition: 500ms;
   }
   
 /* 

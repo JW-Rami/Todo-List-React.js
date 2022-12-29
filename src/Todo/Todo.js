@@ -1,5 +1,6 @@
 import React from "react";
 import "./Todo.css";
+import { useState } from "react";
 
 function Todo({ todo, toggleComplete, removeTodo }) {
   function handleCheckboxClick() {
@@ -8,6 +9,10 @@ function Todo({ todo, toggleComplete, removeTodo }) {
   function handleRemoveClick() {
     removeTodo(todo.id);
   }
+  const handleModifierTodo = () => {
+    setModifierTodo(true);
+  };
+  const [modifierTodo, setModifierTodo] = useState(false);
 
   return (
     <div className="list-container" style={{ display: "flex" }}>
@@ -23,8 +28,17 @@ function Todo({ todo, toggleComplete, removeTodo }) {
           }}
         >
           <div className="text-todo">
-
-          {todo.task}
+            {/* {modifierTodo ? (
+              <>
+                <form>
+                  <input type="text" defaultValue={todo.task} />
+                </form>
+              </>
+            ) : (
+              <></>
+            )} */}
+            {todo.task}
+            {/* <button onClick={handleModifierTodo}>modif</button> */}
           </div>
         </li>
       </div>
