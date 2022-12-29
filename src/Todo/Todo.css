@@ -36,8 +36,8 @@
   }
 .delete-button {
     color: white;
-    position: fixed;
-    right: 22%;
+    /* position: fixed;
+    right: 22%; */
     padding: 12px;
     height: 8px!important;
     width: 8px!important;
