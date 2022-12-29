@@ -1,32 +1,35 @@
 form {
     height: 10%;
-    width: 50%;
+    width: 30%;
     /* background-color: red; */
     display: flex;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
+    justify-content: space-around;
     align-items: center;
     /* flex-direction: column; */
 }
 
-input {
+form input {
     border-radius: 10px;
     padding: 2%;
+    width: 50%;
+    padding-right: 15%;
     background-color: rgb(202, 100, 10);
     border:none;
+    font-size: 1.2em;
+    font-weight: 800;
 }
 
-input:hover{
+form input:hover{
     transition: 350ms;
     background-color: #282c34;
     color: rgb(202, 100, 10);
     border: solid 1px rgb(202,100,10);
 }
 
-input:focus{
+form input:focus{
     background-color: #282c34;
     color: rgb(202, 100, 10);
-    /* border-color: rgb(202,100, 10);
-    border: solid 4px rgb(255, 192, 5); */
 }
 
 button {
@@ -34,6 +37,7 @@ button {
     padding: 2%;
     background-color: rgb(202, 100, 10);
     border: none;
+    cursor: pointer;
 }
 
 button:hover{

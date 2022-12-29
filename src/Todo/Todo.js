@@ -12,16 +12,23 @@ function Todo({ todo, toggleComplete, removeTodo }) {
   return (
     <div className="list-container" style={{ display: "flex" }}>
       <div className="task-and-checkbox">
-        <input type="checkbox" onClick={handleCheckboxClick}  />
+        <input
+          className="checkbox-input"
+          type="checkbox"
+          onClick={handleCheckboxClick}
+        />
         <li
           style={{
-            color: "white",
             textDecoration: todo.completed ? "line-through" : null,
           }}
         >
+          <div className="text-todo">
+
           {todo.task}
+          </div>
         </li>
       </div>
+
       <button className="delete-button" onClick={handleRemoveClick}>
         X
       </button>
